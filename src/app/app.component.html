@@ -1,0 +1,22 @@
+<h1>Let's Learn It</h1>
+   <p>
+      My First Angular app
+  </p>
+
+<div class="container">
+  <h2>Login</h2>
+</div>
+<div>
+<label>Username</label><br> 
+<input type='text' placeholder='Username' id="user" [(ngModel)]="username" required >
+<br>
+<label>Password</label><br>
+<input type='password' placeholder='Password'  [(ngModel)]="password" required><br>
+<br>
+<div>
+  <div *ngFor="let user of users">  
+    We have a user {{user.username}}  and password is {{user.password}} 
+  </div>
+</div>
+
+<button (click)="addUser()" >Add User</button>
